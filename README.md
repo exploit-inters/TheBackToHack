@@ -20,8 +20,11 @@ It has a lot of options that will help you a lot in your tasks :)
 - Now if your operating system is kali Linux you can run the tool without running the installer.sh because all the tool needs exist in kali linux
 
 if not your os kali linux please run Installer.sh file using this commands:
+
                                                                            1 >  chmod +x *
-                                                                           2 > ./Installer.sh
+                                                                           
+                                                                           2 > ./Installer.sh for install all tool needs :)
+                                                                         
                                                                            
 # Note for windows users:
 
