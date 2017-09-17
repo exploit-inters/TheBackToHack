@@ -2,7 +2,7 @@
 """
 		               Welcome To TheBackToHack
 	                  -----------------------------------
-			  
+
           TheBackToHack is an Open Source Security Tool Kit developed for Pen-Testers
 
 # what is TheBackToHack Tool
@@ -20,7 +20,7 @@ Thanks for using :)
 
 """
 
-
+ver = "3.5"
 import optparse,os,socket,time
 
 #################################################### Tool Options ####################################################
@@ -87,7 +87,7 @@ Examples:
 ./TheBackToHack -F oseid@gmail.com -W /usr/share/wordlists/rockyou.txt
 ./TheBackToHack -G oseid@gmail.com -L /root/Desktop/wordlist.txt
 ./TheBackToHack -A 5d41402abc4b2a76b9719d911017c592 -B /root/wordlist.txt
-""",version="\n[+]Tool-Version=> 3.5")
+""",version="\n[+]Tool-Version=> "+str(ver))
 ##################################################### END OPTIONS  #####################################################
 
 ####################### Checking internet connection #######################
@@ -179,7 +179,8 @@ def Main():
 		      exit()
 
 		elif options.ShowVersion:
-			print("\n[+]Tool-Version=> 3.5")
+			global ver
+			print("\n[+]Tool-Version=> "+str(ver))
 
 		elif options.Website !=None and options.Port !=None:
 			global check
@@ -668,6 +669,7 @@ def Main():
 
 if __name__=='__main__':
 	Main()
+
 
 ##############################################################
 ##################### 		     #########################
