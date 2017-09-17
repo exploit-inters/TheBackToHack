@@ -27,7 +27,9 @@ It has a lot of options that will help you a lot in your tasks :)
  
  2 > type this command :> chmod +x *
  
-Now you can run the tool without running the installer.sh because all the tool needs exist in kali linux os
+Now you can run the tool without running the installer.sh file because all the tool needs exist in kali linux os
+
+run the tool using this command :> ./TheBackToHack
 
 - if not your os kali linux please run Installer.sh file using this commands:
 
