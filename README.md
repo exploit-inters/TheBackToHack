@@ -51,6 +51,9 @@ This all tool needs:
 install it all, and tool will be work without problems on windows os :)
 
 
+# Usage:
+
+Just run the tool and see the options, you will find all the examples of options to help you :)
 
 # That's all :)
 
