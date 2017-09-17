@@ -42,7 +42,7 @@ Networking:
 
 	 -o <TargetIP>	                      ::>   This Option For Scan Your Network From Target Os Name.
 
-	 -f<Gateway>                          ::>   This Option For Find a Live Hosts On Your Network.
+	 -f <Gateway>                         ::>   This Option For Find a Live Hosts On Your Network.
 
 	 -x <Target Website>                  ::>   This Option For Find All Ip Addresses of Target Website.
 
