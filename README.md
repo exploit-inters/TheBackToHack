@@ -17,7 +17,7 @@ It has a lot of options that will help you a lot in your tasks :)
 
 2 > open tool folder using this command :> cd TheBackToHack
 
-- Now if your operating system is kali Linux you can run the tool without running the installer.sh because all the tool needs exist in it
+- Now if your operating system is kali Linux you can run the tool without running the installer.sh because all the tool needs exist in kali linux
 
 if not your os kali linux please run Installer.sh file using this commands:
                                                                            1 >  chmod +x *
