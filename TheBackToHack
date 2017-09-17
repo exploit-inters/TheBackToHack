@@ -623,10 +623,16 @@ def Main():
 			    exit()
 
 		elif options.update:
+		     try:
+			import subprocess
+		     except:
+			   print("\n[!]The [ subprocess lib ] is Not Found!\n[*]woring this option needs [ subprocess ] to work!.")
+			   exit()
+
 		     def update():
 			         global check9
 			         if check9 == True:
-					 	  updater = os.system("git pull origin master")
+					 	  updater = subprocess.check_output("git pull origin master", shell=True)
 						  if "Already up-to-date." in updater:
 					                return 1
 						  elif "error" or "Error" in updater:
@@ -636,24 +642,22 @@ def Main():
 				 elif check9 == False:
 			              return 2
 
-		     toollink = "https://github.com/Oseid/TheBackToHack.git"
+		     toollink = "https://github.com/Oseid/TheBackToHack"
 		     print("\n[*]Update in progress.....")
-		     time.sleep(3)
 	             if update() == 2:
 				print("\n[!]Ops: Your Not Connect to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit()
-
 		     elif update() == 1:
 				print("TheBackToHack is already equal with origin master.")
 				exit()
-
 		     elif update() == -1:
 				print("TheBackToHack experienced an error while updating, please download manually from: {}".format(toolink))
 				exit()
-
 	             elif update() == 0:
-				print("TheBackToHack has successfully updated to the latest version.")
-				exit()
+			 	print("TheBackToHack has successfully updated to the latest version.")
+			 	exit()
+		     else:
+			 pass
 
 		else:
 			print(parse.usage)
