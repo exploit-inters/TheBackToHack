@@ -33,29 +33,29 @@ sleep 2
 echo
 echo
 if [ -f /usr/bin/python];then
-sudo apt-get clean
-sudo apt-get -y update
-sudo pip install scapy
-sudo pip install impacket
-sudo pip install dnspython
-sudo pip install pcapy
-sudo pip install mechanize
+	sudo apt-get clean
+	sudo apt-get -y update
+	sudo pip install scapy
+	sudo pip install impacket
+	sudo pip install dnspython
+	sudo pip install pcapy
+	sudo pip install mechanize
 
 else
-sudo apt-get install python
-sudo apt-get clean
-sudo apt-get -y update
-sudo pip install scapy
-sudo pip install impacket
-sudo pip install dnspython
-sudo pip install pcapy
-sudo pip install mechanize
+	sudo apt-get clean
+	sudo apt-get -y update
+	sudo apt-get install python
+	sudo pip install scapy
+	sudo pip install impacket
+	sudo pip install dnspython
+	sudo pip install pcapy
+	sudo pip install mechanize
 fi
 cp TheBackToHack /usr/bin
 sleep 1
 echo
 echo
-echo -e "${BLUE}[*]${RED}:${GREEN}Finshing........"
+echo -e "${BLUE}[*]${RED}:${GREEN}Finishing........"
 sleep 7
 echo
 echo -e "${BLUE}[*]${RED}:${GREEN}Done!"
@@ -65,16 +65,16 @@ echo
 echo -e -n "${BLUE}[?]${RED}:${GREEN}Do you Want Run ${RED}[ ${BLUE}TheBackToHack${RED} ] ${GREEN}? ${BLUE}[Y/n]: "
 read cohice
 if [[ $cohice = y || $cohice = Y ]]; then
-clear
-echo
-echo -e "${BLUE}[*]${RED}:${GREEN} Runing${RED} TheBackToHack......${GREEN}"
-sleep 1
-echo
-echo -e "[*]Welcome! :)${WHITE}"
-sleep 2
-sudo TheBackToHack
+	clear
+	echo
+	echo -e "${BLUE}[*]${RED}:${GREEN} Running${RED} TheBackToHack......${GREEN}"
+	sleep 1
+	echo
+	echo -e "[*]Welcome! :)${WHITE}"
+	sleep 1
+	sudo TheBackToHack
 else
-echo
-echo -e "${RED}Done! ${BLUE}>> ${GREEN}Type [$BLUE TheBackToHack$GREEN ] In Your Termnal To Run! "
-exit
+	echo
+	echo -e "${RED}Done! ${BLUE}>> ${GREEN}Type [$BLUE TheBackToHack$GREEN ] In Your Termnal To Run Tool :) "
+	exit
 fi
