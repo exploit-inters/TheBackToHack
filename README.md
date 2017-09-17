@@ -54,6 +54,8 @@ install it all, and tool will be work without problems on windows os :)
 
 # That's all :)
 
+by Oseid Aldary :)
+
 Thanks for using 
 
 have a nice day, goodbye
