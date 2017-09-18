@@ -32,7 +32,7 @@ echo -e "${BLUE}[*]${RED}:${GREEN}Installing${RED}........${BLUE}"
 sleep 2
 echo
 echo
-if [ -f /usr/bin/python];then
+if [ -f /usr/bin/python ];then
 	sudo apt-get clean
 	sudo apt-get -y update
 	sudo pip install scapy
