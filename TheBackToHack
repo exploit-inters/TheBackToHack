@@ -3,8 +3,8 @@
 		                        [+]> Welcome To TheBackToHack <[+]		                             
 ||---------------------------------------------------------------------------------------------------------||
 ||													   ||
-||# [*]What Is [ TheBackToHack ] Tool?:									   ||	   ||												           ||
-||>TheBackToHack: She A Tool That Has Been programmed To Facilitate Penetration For Hackers 		   || ||													   ||
+||# [*]What Is [ TheBackToHack ] Tool?:									   ||												           ||
+||>TheBackToHack: She A Tool That Has Been programmed To Facilitate Penetration For Hackers 		   ||													   ||
 || You Can Do A Lot Of Attacks Using Them 								   ||
 ||													   ||
 || It Has A Lot Of Options That Will Help You A Lot In Your Tasks :)					   ||
@@ -146,7 +146,7 @@ def Main():
                        import subprocess
                        import platform
                     except:
-                          print("[!]the [ subprocess lib or platform lib ] is Not Found!\n[*]waring this option needs [ subprocess lib and platform lib ] to work!.")
+                          print("[!]the [ subprocess lib or platform lib ] is Not Found!\n[*]Warning this option needs [ subprocess lib and platform lib ] to work!.")
                           exit()
 		    try:
        		       if platform.system() == "Linux":
@@ -335,7 +335,7 @@ def Main():
 		         try:
 			    import urllib
 			 except:
-				print("\n[!]the [ urllib ] is Not Found\n[*]waring this option needs [ urllib ] to work!.")
+				print("\n[!]the [ urllib ] is Not Found\n[*]Warning this option needs [ urllib ] to work!.")
 				exit()
 
 			 reversed_dns = socket.getfqdn(ip)
@@ -416,7 +416,7 @@ def Main():
 		        try:
 			   import hashlib
 		     	except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]Warning this option needs [ hashlib ] to work!.")
 			      exit()
 			try:
 			   MD5 = options.MD5H
@@ -434,7 +434,7 @@ def Main():
 		        try:
 			   import hashlib
 		     	except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]Warning this option needs [ hashlib ] to work!.")
 			      exit()
                         try:
                            SHA1 = options.SHA1H
@@ -452,7 +452,7 @@ def Main():
 		        try:
 			   import hashlib
 		     	except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]Warning this option needs [ hashlib ] to work!.")
 			      exit()
                         try:
                            SHA512 = options.SHA512H
@@ -470,7 +470,7 @@ def Main():
 			try:
 			   import binascii
 			except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]Warning this option needs [ hashlib ] to work!.")
 			      exit()
 			try:
 			   encoding='utf-8'
@@ -551,7 +551,7 @@ def Main():
 			                 try:
 					    import smtplib
 					 except:
-				               print("\n[!]the [ smtplib ] is Not Found!\n[*]waring this option needs [ smtplib ] to work!.")
+				               print("\n[!]the [ smtplib ] is Not Found!\n[*]Warning this option needs [ smtplib ] to work!.")
 					       exit()
 				         rs = 1
 					 ss = smtplib.SMTP("smtp.gmail.com", 587)
@@ -590,7 +590,7 @@ def Main():
 			try:
 			   import md5
 			except:
-			      print("[\n!]the [ md5 lib ] Not Found!\n[*]waring this option needs [ md5 lib ] to work!.")
+			      print("[\n!]the [ md5 lib ] Not Found!\n[*]Warning this option needs [ md5 lib ] to work!.")
 			      exit()
 		        loo = 1
 			pass_in = options.MD5HASH
@@ -629,7 +629,7 @@ def Main():
 			   try:
 		              from urllib2 import urlopen, Request, URLError, HTTPError
                   	   except:
-			         print("The [ urllib2 ] is Not Found!\n[!]Waring this option needs [ urllib2 ] to work!.")
+			         print("The [ urllib2 ] is Not Found!\n[!]Warning this option needs [ urllib2 ] to work!.")
 			         exit()
 			   def finderCP():
 				       try:
@@ -681,7 +681,7 @@ def Main():
 		     try:
 			import subprocess
 		     except:
-			   print("\n[!]The [ subprocess lib ] is Not Found!\n[*]waring this option needs [ subprocess ] to work!.")
+			   print("\n[!]The [ subprocess lib ] is Not Found!\n[*]Warning this option needs [ subprocess ] to work!.")
 			   exit()
 		     global check9
 		     if check9 == True:
