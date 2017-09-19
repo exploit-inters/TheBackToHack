@@ -51,8 +51,6 @@ else
 	sudo pip install pcapy
 	sudo pip install mechanize
 fi
-cp TheBackToHack /usr/bin
-cp wordlist.lst /usr/bin
 sleep 1
 echo
 echo
@@ -73,9 +71,10 @@ if [[ $cohice = y || $cohice = Y ]]; then
 	echo
 	echo -e "[*]Welcome! :)${WHITE}"
 	sleep 1
-	sudo TheBackToHack
+	chmod +x TheBackToHack
+	sudo ./TheBackToHack
 else
 	echo
-	echo -e "${RED}Done! ${BLUE}>> ${GREEN}Type [$BLUE TheBackToHack$GREEN ] In Your Termnal To Run Tool :) "
+	echo -e "${RED}Done! ${BLUE}>> ${GREEN}Type [$BLUE./TheBackToHack$GREEN ] In Your Termnal To Run Tool :) "
 	exit
 fi
