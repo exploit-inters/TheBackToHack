@@ -28,7 +28,7 @@ echo -e "${BLUE}[*]${RED}:${GREEN}[ Connected ]"
 sleep 1
 clear
 echo
-echo -e "${BLUE}[*]${RED}:${GREEN}Installing${RED}........${BLUE}"
+echo -e "${BLUE}[*]${RED}:${GREEN}Installing Requirements need${RED}........${BLUE}"
 sleep 2
 echo
 echo

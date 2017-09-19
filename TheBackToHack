@@ -145,7 +145,7 @@ def Main():
                        import subprocess
                        import platform
                     except:
-                          print("[!]the [ subprocess lib or platform lib ] is Not Found!\n[*]woring this option needs [ subprocess lib and platform lib ] to work!.")
+                          print("[!]the [ subprocess lib or platform lib ] is Not Found!\n[*]waring this option needs [ subprocess lib and platform lib ] to work!.")
                           exit()
 		    try:
        		       if platform.system() == "Linux":
@@ -228,9 +228,8 @@ def Main():
 				      exit()
 
 				def OS_Detection():
-					  	print ('')
 					  	if targetip==self_ip:
-							print (EX+"%s belongs to Linux family..." % targetip)
+							print ("\n[*]targetIP: %s\n[>]This target belongs to Linux family..." % targetip)
 							return
 					  	ans,unans=arping(targetip,timeout=2,verbose=False)
 					  	ip=IP()
@@ -240,18 +239,18 @@ def Main():
 				 	  	icmp.code=0
 					  	z=sr1(ip/icmp,timeout=10,verbose=False)
 					  	if z is None and len(ans)==1:
-							print("Host is up...but seems to be filtered...")
+							print("[*!]Host is up...but seems to be filtered...")
 					  	elif z is None and len(ans)==0:
-							print("Host is unreachable...")
+							print("[!]Host is unreachable...")
 					  	else:
 							if z.ttl==128:
-								print("%s belongs to Windows family..." % targetip)
+								print("\n[*]targetIP: %s <:\n[>]This target belongs to Windows family..." % targetip)
 							elif z.ttl==64:
-								print("%s belongs to Linux family..." % targetip)
+								print("\n[*]targetIP: %s <:\n[>]This target belongs to Linux family..." % targetip)
 							elif z.ttl==56:
-								print("%s belongs to Mac family..."% targetip)
+								print("\n[*]targetIP: %s <:\n[>]This target belongs to Mac family..."% targetip)
 							else:
-								print("Unknown OS...")
+								print("\n[!]Unknown OS ---> %s"%(targetip))
 				OS_Detection()
 			elif check4 == False:
 				print("\n[!]Please connect to the internet and try again :) ")
@@ -335,7 +334,7 @@ def Main():
 		         try:
 			    import urllib
 			 except:
-				print("\n[!]the [ urllib ] is Not Found\n[*]woring this option needs [ urllib ] to work!.")
+				print("\n[!]the [ urllib ] is Not Found\n[*]waring this option needs [ urllib ] to work!.")
 				exit()
 
 			 reversed_dns = socket.getfqdn(ip)
@@ -416,7 +415,7 @@ def Main():
 		        try:
 			   import hashlib
 		     	except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]Woring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
 			      exit()
 			try:
 			   MD5 = options.MD5H
@@ -434,7 +433,7 @@ def Main():
 		        try:
 			   import hashlib
 		     	except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]Woring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
 			      exit()
                         try:
                            SHA1 = options.SHA1H
@@ -452,7 +451,7 @@ def Main():
 		        try:
 			   import hashlib
 		     	except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]Woring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
 			      exit()
                         try:
                            SHA512 = options.SHA512H
@@ -470,7 +469,7 @@ def Main():
 			try:
 			   import binascii
 			except:
-			      print("\n[!]the [ hashlib ] is not found\n[*]Woring this option needs [ hashlib ] to work!.")
+			      print("\n[!]the [ hashlib ] is not found\n[*]waring this option needs [ hashlib ] to work!.")
 			      exit()
 			try:
 			   encoding='utf-8'
@@ -551,7 +550,7 @@ def Main():
 			                 try:
 					    import smtplib
 					 except:
-				               print("\n[!]the [ smtplib ] is Not Found!\n[*]woring this option needs [ smtplib ] to work!.")
+				               print("\n[!]the [ smtplib ] is Not Found!\n[*]waring this option needs [ smtplib ] to work!.")
 					       exit()
 				         rs = 1
 					 ss = smtplib.SMTP("smtp.gmail.com", 587)
@@ -590,7 +589,7 @@ def Main():
 			try:
 			   import md5
 			except:
-			      print("[\n!]the [ md5 lib ] Not Found!\n[*]woring this option needs [ md5 lib ] to work!.")
+			      print("[\n!]the [ md5 lib ] Not Found!\n[*]waring this option needs [ md5 lib ] to work!.")
 			      exit()
 		        loo = 1
 			pass_in = options.MD5HASH
@@ -627,7 +626,7 @@ def Main():
 		     try:
 			import subprocess
 		     except:
-			   print("\n[!]The [ subprocess lib ] is Not Found!\n[*]woring this option needs [ subprocess ] to work!.")
+			   print("\n[!]The [ subprocess lib ] is Not Found!\n[*]waring this option needs [ subprocess ] to work!.")
 			   exit()
 		     global check9
 		     if check9 == True:
@@ -677,4 +676,5 @@ if __name__=='__main__':
 #This Tool by Oseid Aldary
 #Have a nice day :)
 #GoodBye
+
 
