@@ -52,6 +52,7 @@ else
 	sudo pip install mechanize
 fi
 cp TheBackToHack /usr/bin
+cp wordlist.lst /usr/bin
 sleep 1
 echo
 echo
