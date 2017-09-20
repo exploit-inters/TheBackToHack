@@ -13,7 +13,7 @@ TheBackToHack she a tool that has been programmed to facilitate penetration for 
 
 And you can do a lot of attacks using them
 
-It has a lot of options that will help you a lot in your tasks :)
+It has a lot of options that will help you a lot in your Jobs :)
 
 # How you Install it
 
