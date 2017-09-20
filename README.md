@@ -21,7 +21,7 @@ It has a lot of options that will help you a lot in your tasks :)
 
 2 > open tool folder using this command :> cd TheBackToHack
 
-- if your operating system is kali Linux:
+- if your operating system is kali Linux2017.1:
 
  1 > open tool folder using this comaand :> cd TheBackToHack/
  
@@ -31,7 +31,7 @@ Now you can run the tool without running the installer.sh file because all the t
 
 run the tool using this command :> ./TheBackToHack
 
-- if not your os kali linux please run Installer.sh file using this commands:
+- if not your os kali linux Please run Installer.sh file using this commands:
 
     1 >  chmod +x *
     
@@ -61,6 +61,8 @@ This all tool needs:
 - pip install mechanize
 
 install it all, and tool will be work without problems on windows os :)
+
+click on tool file to run them:)
 
 
 # Usage:
