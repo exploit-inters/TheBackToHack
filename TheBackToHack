@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 """
-		                        [+]> Welcome To TheBackToHack <[+]
+		                     [+]> Welcome To TheBackToHack <[+]
 ||---------------------------------------------------------------------------------------------------------||
 ||													   ||
 ||# [*]What Is [ TheBackToHack ] Tool?:									   ||
@@ -142,7 +142,7 @@ def Main():
 	gr.add_option("-L","--Wordlist",dest="wlist2",type="string")
 	gr.add_option("-A","--MD5hash",dest="MD5HASH",type="string")
 	gr.add_option("-B","--lestpass",dest="wlist3",type="string")
-	gr.add_option("-D","--wesite",dest="Website",type="string")
+	gr.add_option("-D","--website",dest="Website",type="string")
 	gr.add_option("-u","--update",action="store_true",dest="update",default=False)
 	(options,args) = parse.parse_args()
 	try:
