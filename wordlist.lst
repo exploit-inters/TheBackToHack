@@ -2162,10 +2162,12 @@ adminpanel.%EXT%
 adminpanel.html
 adminpanel.js
 adminpanel.php
-adminpanel/ PSUser/ 
+adminpanel/ 
+PSUser/ 
 admin.php
 adminpro/
-adminpro/ Lotus_Domino_Admin/
+adminpro/ 
+Lotus_Domino_Admin/
 adminrootusr/
 admins
 admins/
