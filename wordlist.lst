@@ -1,7 +1,7 @@
 0admin/
 0manager/
+0manager/ 
 aadmin/
-acceso.
 acceso.asp
 acceso.aspx
 acceso.brf
@@ -21,7 +21,6 @@ account.html
 account.js
 account.php
 accounts/
-accounts.
 accounts.%EXT%
 acct_login/
 acesso/
@@ -130,7 +129,6 @@ adm/affiliate.js
 adm/affiliate.php
 adm.asp
 adm.aspx
-adm_auth.
 adm_auth.asp
 adm_auth.aspx
 adm_auth.brf
@@ -167,9 +165,7 @@ adm/home.js
 adm/home.php
 adm.html
 admin
-admin 
 admin/
-admin.
 ADMIN/
 admin1/
 admin1.
@@ -180,7 +176,6 @@ admin1.html
 admin1.php
 admin2
 admin2/
-admin2.
 admin2.asp
 admin2.brf
 admin2.cfm
@@ -201,7 +196,6 @@ admin2/login.cgi
 admin2/login.js
 admin2/login.php
 admin2.php
-admin3
 admin3/
 admin4
 admin4/
@@ -216,7 +210,6 @@ admin/acceso.cfm
 admin/acceso.cgi
 admin/acceso.js
 admin/acceso.php
-admin/account.
 admin/account.asp
 admin/account.aspx
 admin/account.brf
@@ -240,7 +233,6 @@ admin/adm.brf
 admin/adm.cfm
 admin/adm.cgi
 admin/admin/
-admin/admin.
 admin/admin.asp
 admin/admin.aspx
 admin/admin.brf
@@ -270,9 +262,6 @@ admin/administratorlogin.js
 admin/administratorlogin.php
 admin/administrator.php
 admin/admin.js
-admin/admin_login.
-admin/admin-login.
-admin/adminLogin.
 admin/admin_login.asp
 admin/admin-login.asp
 admin/adminLogin.asp
@@ -329,7 +318,6 @@ adminare
 adminarea
 admin_area
 admin_area/
-admin_area.
 adminarea/
 admin_area/acceso.asp
 adminarea/acceso.asp
@@ -383,7 +371,6 @@ admin_area/adm.cfm
 adminarea/adm.cfm
 admin_area/adm.cgi
 adminarea/adm.cgi
-admin_area/admin.
 admin_area/admin.asp
 adminarea/admin.asp
 admin_area/admin.aspx
@@ -590,7 +577,6 @@ admin_area/index.js
 adminarea/index.js
 admin_area/index.php
 adminarea/index.php
-admin_area/login.
 admin_area/login.asp
 adminarea/login.asp
 admin_area/login.aspx
@@ -711,8 +697,8 @@ admin.aspx
 admin.brf
 admin.cfm
 admin.cgi
-admincontrol/
 admincontrol
+admincontrol/
 admincontrol/acceso.asp
 admincontrol/acceso.aspx
 admincontrol/acceso.brf
@@ -869,7 +855,6 @@ admincontrol/moderator.cfm
 admincontrol/moderator.cgi
 admincontrol/moderator.js
 admincontrol/moderator.php
-admin/controlpanel.
 admin/controlpanel.asp
 admin/controlpanel.aspx
 admin/controlpanel.brf
@@ -917,8 +902,6 @@ admincontrol/wp-login.cgi
 admincontrol/wp-login.js
 admincontrol/wp-login.php
 admincp
-admin/cp.
-admincp 
 admincp/
 admincpacceso.asp
 admincpacceso.aspx
@@ -1157,13 +1140,11 @@ administracao/
 administrador/
 administratie/
 administration/
-administration.
 administration.%EXT%
 administration.html
 administration.php
 administrator
 administrator/
-administrator.
 administrator/acceso.asp
 administrator/acceso.aspx
 administrator/acceso.brf
@@ -1304,9 +1285,7 @@ administrator/index.js
 administrator/index.php
 administrator.js
 administratorlogin
-administrator/login.
 administratorlogin/
-administratorlogin.
 administrator/login.asp
 administratorlogin.asp
 administrator/login.aspx
@@ -1341,7 +1320,6 @@ administrator/moderator.php
 administrator.php
 administrator.php/
 administrators/
-administrators.
 administrators.%EXT%
 administrator/user.asp
 administrator/user.aspx
@@ -1381,19 +1359,13 @@ administrator/wp-login.php
 administrivia/
 administrivia/ Database_Administration/ WebAdmin/
 adminitem/
-adminitem.
 adminitem.%EXT%
 adminitems/
-adminitems.
 adminitems.%EXT%
 admin.js
 admin_login/
-admin_login.
 admin-login/
-admin-login.
-admin/login.
 adminlogin/
-adminlogin.
 adminLogin
 adminLogin/
 admin_login/acceso.asp
@@ -2308,7 +2280,6 @@ adm/wp-login.cfm
 adm/wp-login.cgi
 adm/wp-login.js
 adm/wp-login.php
-affiliate.
 affiliate.asp
 affiliate.aspx
 affiliate.brf
@@ -2317,18 +2288,12 @@ affiliate.cgi
 affiliate.%EXT%
 affiliate.js
 affiliate.php
-auth.
-authadmin.
 authadmin.%EXT%
-authenticate.
 authenticate.%EXT%
-authentication.
 authentication.%EXT%
 auth.%EXT%
-authuser.
 authuser.%EXT%
 autologin/
-autologin.
 autologin.%EXT%
 banneradmin/
 bb-admin
@@ -2525,7 +2490,6 @@ bb-admin/wp-login.js
 bb-admin/wp-login.php
 bigadmin/
 blogindex/
-blog/wp-login.
 blog/wp-login.%EXT%
 cadmins/
 ccms/
@@ -2534,18 +2498,13 @@ ccms/login.php
 ccp14admin/
 cgi-bin/login
 cgi-bin/login%EXT%
-check.
-checkadmin.
 checkadmin.%EXT%
 check.%EXT%
-checklogin.
 checklogin.%EXT%
-checkuser.
 checkuser.%EXT%
 cms
 cms/
 cmsadmin/
-cmsadmin.
 cmsadmin.%EXT%
 cmsadmin/ SysAdmin2/ 
 cms%EXT%
@@ -2553,12 +2512,10 @@ config/
 configuration/
 configure/
 control/
-control.
 controle/
 control.%EXT%
 controlpanel
 controlpanel/
-controlpanel.
 controlpanel/acceso.asp
 controlpanel/acceso.aspx
 controlpanel/acceso.brf
@@ -2752,7 +2709,6 @@ controlpanel/wp-login.js
 controlpanel/wp-login.php
 cp
 cp/
-cp.
 cp/acceso.asp
 cp/acceso.aspx
 cp/acceso.brf
@@ -3145,7 +3101,6 @@ entrar.html
 entrar.php
 ezsqliteadmin/
 fileadmin/
-fileadmin.
 fileadmin.asp
 fileadmin.%EXT%
 fileadmin.html
@@ -3355,23 +3310,16 @@ instadmin/wp-login.cgi
 instadmin/wp-login.js
 instadmin/wp-login.php
 irc-macadmin/
-isadmin.
 isadmin.%EXT%
 key/
 kpanel/
 letmein/
-letmein.
 letmein.%EXT%
 LiveUser_Admin/
 logar/
-login
 log_in/
-log_in.
-log-in/
-log-in.
 login 
 login/
-login.
 login1
 login1/
 login1%EXT%
@@ -3421,20 +3369,15 @@ Lotus_Domino_Admin/
 macadmin/
 maintenance/
 manage/
-manage.
 manage.%EXT%
 management/
-management.
 management.%EXT%
 manager/
-manager.
 manager.%EXT%
 manuallogin/
 member/
-member.
 memberadmin
 memberadmin/
-memberadmin.
 memberadmin/acceso.asp
 memberadmin/acceso.aspx
 memberadmin/acceso.brf
@@ -3826,7 +3769,6 @@ modelsearch/wp-login.js
 modelsearch/wp-login.php
 moderator
 moderator/
-moderator.
 moderator/acceso.asp
 moderator/acceso.aspx
 moderator/acceso.brf
@@ -3854,9 +3796,6 @@ moderator/adm.brf
 moderator/adm.cfm
 moderator/adm.cgi
 moderator/admin
-moderator/admin
-0admin/
-0manager/ 
 moderator/admin.asp
 moderator/admin.aspx
 moderator/admin.brf
@@ -3968,7 +3907,6 @@ moderator/index.cgi
 moderator/index.js
 moderator/index.php
 moderator.js
-moderator/login.
 moderator/login.asp
 moderator/login.aspx
 moderator/login.brf
@@ -4422,7 +4360,6 @@ pages/wp-login.php
 painel/
 paineldecontrole/
 panel/
-panel.
 panel-administracion
 panel-administracion/
 panel-administracion/acceso.asp
@@ -4625,7 +4562,6 @@ phppgadmin/
 phpSQLiteAdmin/
 platz_login/
 power_user/
-processlogin.
 processlogin.%EXT%
 project-admins/
 PSUser/
@@ -4823,7 +4759,6 @@ rcjakar/wp-login.js
 rcjakar/wp-login.php
 rcLogin/
 registration/
-relogin.
 relogin.%EXT%
 relogin.htm
 relogin.html
@@ -4840,8 +4775,8 @@ security/
 senha/
 senhas/
 server/
+Server 
 Server/
-Server.
 ServerAdministrator/
 server_admin_small/
 Server.asp
@@ -4851,11 +4786,8 @@ Server.php
 sff/
 showlogin/
 sign_in/
-sign_in.
 sign-in/
-sign-in.
 signin/
-signin.
 sign_in.%EXT%
 sign-in.%EXT%
 signin.%EXT%
@@ -4863,7 +4795,6 @@ simpleLogin/
 sistema/
 site/
 siteadmin/
-siteadmin.
 siteadmin/acceso.asp
 siteadmin/acceso.aspx
 siteadmin/acceso.brf
@@ -5072,7 +5003,6 @@ supermanager%EXT%
 superman%EXT%
 superuser
 superuser/
-superuser.
 superuser.%EXT%
 superuser%EXT%
 supervise/
@@ -5082,11 +5012,9 @@ supervise/Login super
 supervisor/
 support_login/
 sysadm/
-sysadm.
 sysadm.%EXT%
 sys-admin/
 sysadmin/
-sysadmin.
 SysAdmin/
 SysAdmin2/
 sysadmin.asp
@@ -5097,21 +5025,14 @@ sysadmins/
 system_administration/
 system-administration/
 typo3/
-ur-admin/
 ur-admin
+ur-admin/
 ur-admin.asp
 ur-admin.%EXT%
 ur-admin.html
 ur-admin.php
-ur-admin
-Server 
-ur-admin/
-Server.php
-Server.html
-Server.asp
-Server/
-user/
 user
+user/
 user/admin
 useradmin/
 user/admin.%EXT%
@@ -5129,7 +5050,6 @@ UserLogin/
 userlogin.%EXT%
 user.php
 users/
-users.
 users/acceso.asp
 users/acceso.aspx
 users/acceso.brf
@@ -5244,6 +5164,7 @@ users/cp.cfm
 users/cp.cgi
 users/cp.js
 users/cp.php
+usersecurity/
 users.%EXT%
 users/home.asp
 users/home.aspx
@@ -5704,14 +5625,11 @@ vadmind/
 vmailadmin/
 vmailadmin/ Indy_admin/
 vorod/
-vorod.
 vorod.%EXT%
 vorud/
-vorud.
 vorud.%EXT%
 webadmin
 webadmin/
-webadmin.
 WebAdmin/
 webadmin/acceso.asp
 webadmin/acceso.aspx
@@ -5909,8 +5827,8 @@ webadmin/wp-login.cgi
 webadmin/wp-login.js
 webadmin/wp-login.php
 webmaster/
-webmaster.php
 webmaster.%EXT%
+webmaster.php
 websvn/
 wizmysqladmin/
 wp-admin/
@@ -5933,4 +5851,3 @@ yonetim.asp
 yonetim.%EXT%
 yonetim.html
 yonetim.php
-usersecurity/

