@@ -1,28 +1,26 @@
 #!/usr/bin/python
 """
-		               Welcome To TheBackToHack
-	                  -----------------------------------
-
-          TheBackToHack is an Open Source Security Tool Kit developed for Pen-Testers
-
-# what is TheBackToHack Tool
-
-TheBackToHack she a tool that has been programmed to facilitate penetration for hackers, you can do a lot of attacks using them
-It has a lot of options that will help you a lot in your tasks :)
-
-
-this tool by [->[ Oseid Aldary ]<-][JOKER11]
-
-For Help Please Visit My Account{https://www.facebook.com/profile.php?id=100017170449859}
-and tell me what the problem is
-
-Thanks for using :)
-
+		                        [+]> Welcome To TheBackToHack <[+]		                             
+||---------------------------------------------------------------------------------------------------------||
+||													   ||
+||# [*]What Is [ TheBackToHack ] Tool?:									   ||	   ||												           ||
+||>TheBackToHack: She A Tool That Has Been programmed To Facilitate Penetration For Hackers 		   || ||													   ||
+|| You Can Do A Lot Of Attacks Using Them 								   ||
+||													   ||
+|| It Has A Lot Of Options That Will Help You A Lot In Your Tasks :)					   ||
+||													   ||
+|| And She Work In [Linux] and [Windows] Without Problems						   ||
+||													   ||
+|| This Tool by [->[ Oseid Aldary ]<-][JOKER11]								   ||
+||													   ||
+|| For Help Please Visit My Account{https://www.facebook.com/profile.php?id=100017170449859}		   ||
+||													   ||
+|| And Tell Me What The Problem Is :)									   ||
+||												           ||
+||---------------------------------------------------------------------------------------------------------||
 """
-
-ver = "3.5"
 import optparse,os,socket,time
-
+ver = "4.0"
 #################################################### Tool Options ####################################################
 parse = optparse.OptionParser("""\nUsage: python ./TheBackToHack [options]
 
@@ -64,7 +62,7 @@ Brute Forse:
 	 -F <Target Email> -W <Wordlist>      ::>   This Option For Brute Force Attack On[ Facebook Account ]
 	 -G <Target Email> -L <Wordlist>      ::>   This Option For Brute Force Attack On[ Gmail Account ]
 	 -A <MD5 hash> -B <Wordlist>          ::>   This Option For Brute Force Attack On[ MD5 hash ]
-
+	 -D <Website>			      ::>   This Option For Finder Cp Admin Page Of Website.
 Examples:
 ---------- Networking-ex ---------------
 ./TheBackToHack -t www.yahoo.com -p 80
@@ -87,6 +85,7 @@ Examples:
 ./TheBackToHack -F oseid@gmail.com -W /usr/share/wordlists/rockyou.txt
 ./TheBackToHack -G oseid@gmail.com -L /root/Desktop/wordlist.txt
 ./TheBackToHack -A 5d41402abc4b2a76b9719d911017c592 -B /root/wordlist.txt
+./TheBackToHack -D www.facebook.com
 """,version="\n[+]Tool-Version=> "+str(ver))
 ##################################################### END OPTIONS  #####################################################
 
@@ -110,6 +109,7 @@ check6 = check5
 check7 = check6
 check8 = check7
 check9 = check8
+check10 = check9
 ############################################################################
 
 #[=================================================== Menu and funcions tool ==================================================]#
@@ -137,6 +137,7 @@ def Main():
 	gr.add_option("-L","--Wordlist",dest="wlist2",type="string")
 	gr.add_option("-A","--MD5hash",dest="MD5HASH",type="string")
 	gr.add_option("-B","--lestpass",dest="wlist3",type="string")
+	gr.add_option("-D","--wesite",dest="Website",type="string")
 	gr.add_option("-u","--update",action="store_true",dest="update",default=False)
 	(options,args) = parse.parse_args()
 	try:
@@ -621,7 +622,61 @@ def Main():
 			else:
 			    print("\n\n[!]The Password Is Not Found in [ "+str(pwfile)+" ] File!\n[*]Try Other Wordlist File :)")
 			    exit()
+		elif options.Website !=None:
+			TARGET = options.Website
+			global check10
+			if check10 == True:
+			   try:
+		              from urllib2 import urlopen, Request, URLError, HTTPError
+                  	   except:
+			         print("The [ urllib2 ] is Not Found!\n[!]Waring this option needs [ urllib2 ] to work!.")
+			         exit()
+			   def finderCP():
+				       try:
+	   				  wordl = open("wordlist.lst", 'r')
+				       except:
+	     				     print("\n[!]Missing Wordlist.lst file!!")
+	      				     exit()
 
+				       print("\n\n[*]:Target: [ "+TARGET+" ]")
+				       time.sleep(1)
+				       print("\n[*]:Links list: [ wordlist.lst ]")
+	                               time.sleep(1.1)
+			               print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=")
+				       time.sleep(1.1)
+				       print("\n[$] Finder CP Start [$]")
+				       time.sleep(1)
+				       print("[*]Scanning......")
+				       time.sleep(1)
+				       loob = 1
+				       while True:
+		                                 link = wordl.readline()
+					 	 if not link:
+							break
+						 request_link = "http://"+TARGET+"/"+link
+						 REQUEST = Request(request_link)
+						 try:
+					            response = urlopen(REQUEST)
+						 except HTTPError as e:
+							continue
+
+					         except URLError as w:
+							continue
+
+						 except KeyboardInterrupt:
+							print("\n[!]Exiting........")
+							time.sleep(2)
+							sys.exit(0)
+
+						 else:
+						     print("\n[+] CP[%s] Found! => "%(loob) + request_link)
+						     loob +=1
+                           finderCP()
+		     
+	                elif check10 == False:
+                                             print("\n[!]Ops: Your Not Connect to the internet!\n[*]Please Connect to the internet and try again :)")
+                                             exit()
+					      
 		elif options.update:
 		     try:
 			import subprocess
@@ -646,7 +701,7 @@ def Main():
 		     print("\n[*]Update in progress.....")
 		     time.sleep(2)
 		     if update() == 1:
-				print("\n[*]TheBackToHack is already equal with origin master.")
+				print("\n[*]TheBackToHack is Already up-to-date.")
 				exit()
 		     elif update() == -1:
 				print("\n[*]TheBackToHack experienced an error while updating, please download manually from: {}".format(toolink))
