@@ -210,7 +210,7 @@ def Main():
 
 					scanner(socket.gethostbyname(host), port)
 			elif check == False:
-					   print("\n[*]Please connect to the internet and try again :)")
+					   print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 					   exit(0)
 
 		elif options.Hostname !=None:
@@ -259,7 +259,7 @@ def Main():
 								print("\n[!]Unknown OS ---> %s"%(targetip))
 				OS_Detection()
 			elif check4 == False:
-				print("\n[!]Please connect to the internet and try again :) ")
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit()
 		elif options.Gateway !=None:
 			hostf = options.Gateway
@@ -290,7 +290,7 @@ def Main():
         				print("\n[> %s <] hosts up...\n" %len(live_hosts))
 				Host_Discovery()
 			elif check5 == False:
-				print("\n[!]Please Connect to the internet and try again :)")
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit(0)
 		elif options.website !=None:
 			target = options.website
@@ -334,7 +334,7 @@ def Main():
 						print("\n[!>] %s [<!>]Error:404 Server Not Found\n"%(target))
 						exit()
 			    elif check2 == False:
-				print("\n[!]Please Connect to the internet and try again :)")
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit(0)
 		elif options.targetIP !=None:
 		     ip = options.targetIP
@@ -352,7 +352,7 @@ def Main():
 			 print ("\n[*]IP Info\n")
 			 print(geoip)
 		     elif check6 == False:
-				print("\n[!]Please Connect to the internet and try again :)")
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit(0)
 
 
@@ -361,15 +361,14 @@ def Main():
 			global check3
 			if check3 == True:
 					try:
-				           from impacket import ImpactDecoder
-					   from impacket.ImpactDecoder import EthDecoder
+					   from impacket import ImpactDecoder
 					   import pcapy
 					except:
 					      print("[!]the [ impacket lib or pcapy lib ] is Not Found!\n[*]Please Run Installer.sh to install all Requirements needs.")
 					      exit()
 
 			                try:
-				           inter = options.interface
+				           inter = options.Interface
 				 	   def sniff(hdr,data):
 						decoder = ImpactDecoder.EthDecoder()
         					eth_pack = decoder.decode(data)
@@ -386,7 +385,7 @@ def Main():
 	                                              print("\n\nSniff Stop ~!")
 						      exit(0)
 			elif check3 == False:
-				print("\n[!]Please connect to the internet and try again :)")
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit()
 
 		elif options.interface !=None:
@@ -550,7 +549,7 @@ def Main():
 
 
 			elif check7 == False:
-				print("\n[!]Please connect to the internet and try again :)")
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit()
 
 		elif options.GMtaremail !=None and options.wlist2 !=None:
@@ -592,7 +591,7 @@ def Main():
 									    rs +=1
 
 			 elif check8 == False:
-				print("\n[!]Please connect to the internet and try again :)")
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit()
 		elif options.MD5HASH !=None and options.wlist3 !=None:
 			try:
@@ -687,7 +686,7 @@ def Main():
                            finderCP()
 
 	                elif check10 == False:
-                                             print("\n[!]Ops: Your Not Connect to the internet!\n[*]Please Connect to the internet and try again :)")
+                                             print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
                                              exit()
 
 		elif options.update:
@@ -707,7 +706,7 @@ def Main():
 						  else:
 						         return 0
 		     elif check9 == False:
-                                         print("\n[!]Ops: Your Not Connect to the internet!\n[*]Please Connect to the internet and try again :)")
+                                         print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
                                          exit()
 
 		     toollink = "https://github.com/Oseid/TheBackToHack"
@@ -733,8 +732,11 @@ def Main():
 	except:
 	      pass
 
+
 if __name__=='__main__':
 	Main()
+
+
 
 ##############################################################
 ##################### 		     #########################
