@@ -115,6 +115,7 @@ check7 = check6
 check8 = check7
 check9 = check8
 check10 = check9
+check11 = check10
 ############################################################################
 
 #[=================================================== Menu and funcions tool ==================================================]#
@@ -216,9 +217,13 @@ def Main():
 		elif options.Hostname !=None:
 			name = options.Hostname
 			try:
+			   try:
         			os.system("echo '{}' > /etc/hostname".format(name))
         			os.system("service network-manager restart")
         			print("\n\n[*]Done Your HostName Is: ["+str(name)+"] Now!\n")
+			   except:	
+				    os.system("hostname -b {}".format(name))
+				    print("\n\n[*]Done Your HostName Is: ["+str(name)+"] Now!\n")				 
 			except:
 				print("\n[!]Sorry This Option just work on linux os \n")
 				exit()
@@ -245,18 +250,18 @@ def Main():
 				 	  	icmp.code=0
 					  	z=sr1(ip/icmp,timeout=10,verbose=False)
 					  	if z is None and len(ans)==1:
-							print("[*!]Host is up...but seems to be filtered...")
+							print("\n[*!]:Host is up...but seems to be filtered...")
 					  	elif z is None and len(ans)==0:
-							print("[!]Host is unreachable...")
+							print("\n[!]:Host is unreachable...")
 					  	else:
 							if z.ttl==128:
-								print("\n[*]targetIP: %s <:\n[>]This target belongs to Windows family..." % targetip)
+								print("\n[*]:TargetIP: %s <:\n[>]This Target belongs to [ Windows family ]" % targetip)
 							elif z.ttl==64:
-								print("\n[*]targetIP: %s <:\n[>]This target belongs to Linux family..." % targetip)
+								print("\n[*]:TargetIP: %s <:\n[>]This Target belongs to [ Linux family ]" % targetip)
 							elif z.ttl==56:
-								print("\n[*]targetIP: %s <:\n[>]This target belongs to Mac family..."% targetip)
+								print("\n[*]:TargetIP: %s <:\n[>]This Target belongs to [ Mac family ]"% targetip)
 							else:
-								print("\n[!]Unknown OS ---> %s"%(targetip))
+								print("\n[!]:Unknown OS ---> [ %s"%(targetip)+" ]")
 				OS_Detection()
 			elif check4 == False:
 				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
@@ -389,6 +394,8 @@ def Main():
 				exit()
 
 		elif options.interface !=None:
+		     global check11
+		     if check11 == True:
 			try:
 				           from impacket import ImpactDecoder
 					   from impacket.ImpactDecoder import EthDecoder
@@ -419,6 +426,10 @@ def Main():
 			except:
 					print("\nPlease Enter Your InterFase Connect")
 					exit(0)
+		     elif check11 == False:
+				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
+				exit()
+
 		elif options.MD5H !=None:
 		        try:
 			   import hashlib
@@ -746,5 +757,4 @@ if __name__=='__main__':
 #This Tool by Oseid Aldary
 #Have a nice day :)
 #GoodBye
-
 
