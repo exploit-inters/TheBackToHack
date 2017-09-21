@@ -397,7 +397,7 @@ def Main():
 			      print("[!]the [ impacket lib | or pcapy lib  ] is Not Found!\n[*][*]Please Run Installer.sh to install all Requirements needs.")
 	                      exit()
 
-			dev = options.inface
+			dev = options.interface
 			decoder= EthDecoder()
 			dump_file = "Sniffer-Log.pcp"
 			try:
