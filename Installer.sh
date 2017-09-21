@@ -7,7 +7,7 @@ WHITE='\033[0m'	 #
 ##################
 clear
 echo
-echo -e "${BLUE}[*]${RED}:${GREEN}Checking${RED}[ Internet ]${BLUE}connections${RED}........"
+echo -e "${BLUE}[*]${RED}:${GREEN}Checking${RED} [ Internet ] ${BLUE}Connections${RED}........"
 echo
   ping -c 1 google.com > /dev/null 2>&1
   if [ "$?" != 0 ]
@@ -55,25 +55,25 @@ sleep 1
 echo
 echo
 echo -e "${BLUE}[*]${RED}:${GREEN}Finishing........"
-sleep 7
+sleep 6
 echo
 echo -e "${BLUE}[*]${RED}:${GREEN}Done!"
-sleep 2
+sleep 1
 echo
-echo
-echo -e -n "${BLUE}[?]${RED}:${GREEN}Do you Want Run ${RED}[ ${BLUE}TheBackToHack${RED} ] ${GREEN}? ${BLUE}[Y/n]: "
+echo -e -n "${BLUE}[?]${RED}:${GREEN}Do You Want Run ${RED}[ ${BLUE}TheBackToHack${RED} ] ${GREEN}? ${BLUE}[Y/n]: "
 read cohice
 if [[ $cohice = y || $cohice = Y ]]; then
 	clear
 	echo
-	echo -e "${BLUE}[*]${RED}:${GREEN} Running${RED} TheBackToHack......${GREEN}"
+	echo -e "${BLUE}[*]${RED}:${GREEN} Running${RED} TheBackToHack......${BLUE}"
 	sleep 1
 	echo
-	echo -e "[*]Welcome! :)${WHITE}"
-	sleep 1
-	chmod +x TheBackToHack
+	echo -e "[*]${RED}:${GREEN}Welcome! :)${WHITE}"
+	sleep 0.30
+	chmod +x *
 	sudo ./TheBackToHack
 else
+	sleep 1
 	echo
 	echo -e "${RED}Done! ${BLUE}>> ${GREEN}Type [$BLUE./TheBackToHack$GREEN ] In Your Termnal To Run Tool :) "
 	exit

