@@ -562,7 +562,9 @@ def Main():
 									  lo +=1
 
 				    			          except KeyboardInterrupt:
-						                         print('[!]\nStoping Attack.........')
+						                         print('\n[!]:Stoping Attack.........')
+									 if not (text.find("home_icon",0,len(text))!=-1):
+										os.system("rm Facebook-Log.txt")
 									 time.sleep(2)
 									 exit()
 
@@ -790,3 +792,4 @@ if __name__=='__main__':
 #This Tool by Oseid Aldary
 #Have a nice day :)
 #GoodBye
+
