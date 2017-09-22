@@ -336,7 +336,7 @@ def Main():
         		   	                except dns.resolver.NoAnswer:
            				             pass
 				            dd = loob -1
-					    print("\n\n[+]:This Target WebSite Has [%s] WebServer [UP]!"%(dd))
+					    print("\n\n[+]:This Target WebSite Has [%s] WebServer [ Status: UP ]!"%(dd))
 				            print("")
 					 elif checker() == False:
 						print("\n[!>] %s [<!>]Error:404 Server Not Found\n"%(target))
@@ -357,8 +357,9 @@ def Main():
 			 reversed_dns = socket.getfqdn(ip)
 			 geoip = urllib.urlopen('http://api.hackertarget.com/geoip/?q='
                				+ ip).read().rstrip()
-			 print ("\n[*]IP Info\n")
+			 print ("\n[*]:IP Info\n-------------------------")
 			 print(geoip)
+			 print("-------------------------")
 		     elif check6 == False:
 				print("\n[!]Ops: Your Not Connected to the internet!\n[*]Please Connect to the internet and try again :)")
 				exit(0)
@@ -384,7 +385,7 @@ def Main():
         					tcp_hdr = ip_hdr.child()
         					srcip = ip_hdr.get_ip_src()
         					dstip = ip_hdr.get_ip_dst()
-        					print("\nNew Connection found :From--->[%s] To---> [%s]"%(srcip,dstip))
+        					print("\nNew Connection Found :From--->[%s] To---> [%s]"%(srcip,dstip))
 
 				 	   sniffer = pcapy.open_live(inter,1500,1,100)
  				 	   print("\n[*]> Sniffing Has Been Start On ->[ "+str(inter)+" ] Interface <[*]\n"),
@@ -535,7 +536,7 @@ def Main():
 		 			 time.sleep(1)
 		 			 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 		 			 time.sleep(1.1)
-		 			 print("\n[$]Brute Force Attack Start[$]\n")
+		 			 print("\n[$] Brute Force Attack Start [$]\n")
 		  		   	 time.sleep(0.8)
 		 			 lo = 1
 					 for password in passwfile:
@@ -561,7 +562,8 @@ def Main():
 									  lo +=1
 
 				    			          except KeyboardInterrupt:
-						                         print('\n---------------------------\n[!] Something went wrong!\n[!]Brute Force Attack Stop!\n')
+						                         print('[!]\nStoping Attack.........')
+									 time.sleep(2)
 									 exit()
 
 
@@ -594,7 +596,7 @@ def Main():
 		 			 time.sleep(1)
 		 			 print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 		 			 time.sleep(1.1)
-		 			 print("\n[$]Brute Force Attack Start[$]\n")
+		 			 print("\n[$] Brute Force Attack Start [$]\n")
 		  		   	 time.sleep(0.8)
 					 def start(password):
     							    br.addheaders =[('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
@@ -659,7 +661,7 @@ def Main():
 	                time.sleep(1)
 		 	print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 		 	time.sleep(1.2)
-		 	print("\n[$]Brute Force Attack Start[$]\n")
+		 	print("\n[$] Brute Force Attack Start [$]\n")
 		  	time.sleep(0.8)
 			for passw in passs:
 				filemd5 = md5.new(passw.strip()).hexdigest()
@@ -700,7 +702,7 @@ def Main():
 				       time.sleep(1.1)
 				       print("\n[$] Finder CP Start [$]")
 				       time.sleep(1)
-				       print("[*]Scanning......")
+				       print("[*]:Scanning......")
 				       time.sleep(1)
 				       loob = 1
 				       while True:
