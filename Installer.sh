@@ -32,6 +32,11 @@ echo -e "${BLUE}[*]${RED}:${GREEN}Installing Requirements need${RED}........${BL
 sleep 2
 echo
 echo
+if [ ! -f /usr/bin/pip ];then
+        sudo apt-get clean
+        sudo apt-get -y update
+        sudo apt-get -y install pip
+	
 if [ -f /usr/bin/python ];then
 	sudo apt-get clean
 	sudo apt-get -y update
